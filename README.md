@@ -2,7 +2,7 @@
 
 CLI parser for jinja2 template files using [jinjava](https://github.com/HubSpot/jinjava).
 
-```bash
+```
 $ java -jar j2s-cli-v0.1.jar
 Usage: j2s-cli [options]
 
@@ -11,6 +11,6 @@ Usage: j2s-cli [options]
 ```
 
 Variables in the jinja2 template will be read from the environment and can also be passed as:
-```bash
+```
 $ var1=something java -jar j2s-cli-v0.1.jar
 ```
