@@ -1,5 +1,6 @@
 package com.rgl10.j2scli
 
+import com.rgl10.BuildInfo
 import com.hubspot.jinjava.Jinjava
 import com.rgl10.j2scli.ConfigParser.parser
 import com.rgl10.j2scli.Utils.{inputToString, outputToFile}
@@ -9,7 +10,7 @@ import scala.collection.JavaConverters._
 
 object Main {
   def main(args: Array[String]): Unit = {
-    println("Running j2s-cli...")
+    println(s"Running ${BuildInfo.name}:v${BuildInfo.version}...")
     run(args, sys.env) match {
       case Some(_) => System.exit(0)
       case None =>

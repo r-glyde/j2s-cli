@@ -2,6 +2,7 @@ package com.rgl10.j2scli
 
 import java.io.File
 
+import com.rgl10.BuildInfo
 import scopt.OParser
 
 object ConfigParser {
@@ -9,7 +10,7 @@ object ConfigParser {
   val parser = {
     import builder._
     OParser.sequence(
-      programName("j2s-cli"),
+      programName(s"${BuildInfo.name}"),
       opt[File]('i', "input")
         .valueName("<file>")
         .required()
