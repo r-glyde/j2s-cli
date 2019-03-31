@@ -1,5 +1,7 @@
 # j2s-cli
 
+[![GitHub release](https://img.shields.io/github/release/r-glyde/j2s-cli.svg)](https://github.com/r-glyde/j2s-cli/releases/latest)
+
 CLI parser for jinja2 template files using [jinjava](https://github.com/HubSpot/jinjava).
 
 ```
