@@ -3,17 +3,16 @@ package com.rgl10.j2scli
 import com.hubspot.jinjava.Jinjava
 import com.rgl10.j2scli.ConfigParser.parser
 import com.rgl10.j2scli.Utils.{inputToString, outputToFile}
-import com.typesafe.scalalogging.LazyLogging
 import scopt.OParser
 
 import scala.collection.JavaConverters._
 
-object Main extends LazyLogging {
+object Main {
   def main(args: Array[String]): Unit =
     run(args, sys.env) match {
       case Some(_) => System.exit(0)
       case None =>
-        logger.error("Something went wrong!")
+        println("Something went wrong!")
         System.exit(1)
     }
 

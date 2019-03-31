@@ -1,0 +1,6 @@
+{% set users = [ {"name": "user1", "username": "username1"}, {"name": "user2", "username": "username2"}] -%}
+<ul>
+  {% for user in users -%}
+<li><a href="{{ user.name }}">{{ user.username }}</a></li>
+  {% endfor %}
+</ul>
