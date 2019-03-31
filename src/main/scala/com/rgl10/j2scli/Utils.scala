@@ -2,9 +2,11 @@ package com.rgl10.j2scli
 
 import java.io.{BufferedWriter, File, FileWriter}
 
+import com.typesafe.scalalogging.LazyLogging
+
 import scala.io.Source
 
-object Utils {
+object Utils extends LazyLogging {
   def inputToString(input: File): String = {
     val bs = Source.fromFile(input)
     bs.getLines().mkString("\n")
@@ -13,7 +15,7 @@ object Utils {
   def outputToFile(output: String, file: File): Unit = {
     val bw = new BufferedWriter(new FileWriter(file))
     bw.write(output)
-    println(s"$file written")
+    logger.info(s"$file written")
     bw.close()
   }
 }

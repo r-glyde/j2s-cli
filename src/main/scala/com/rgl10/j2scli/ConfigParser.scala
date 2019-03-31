@@ -11,6 +11,7 @@ object ConfigParser {
     import builder._
     OParser.sequence(
       programName(s"${BuildInfo.name}"),
+      head(s"${BuildInfo.name}:${BuildInfo.version}"),
       opt[File]('i', "input")
         .valueName("<file>")
         .required()
