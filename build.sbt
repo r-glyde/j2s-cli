@@ -14,5 +14,6 @@ val root = (project in file("."))
     scalaVersion := "2.12.8",
     libraryDependencies ++= dependencies,
     fork in run := true,
-    buildInfoSettings
+    buildInfoSettings,
+    assemblyJarName in assembly := s"${name.value}-v${version.value}.jar"
   )

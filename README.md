@@ -12,5 +12,5 @@ Usage: j2s-cli [options]
 
 Variables in the jinja2 template will be read from the environment and can also be passed as:
 ```
-$ var1=something java -jar j2s-cli-v0.1.jar
+$ key1=something java -jar j2s-cli-v0.1.jar
 ```
